@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 int choice;
-double num1,num2,num3,result;
+double num1,num2,result;
 cout<<"Select operation"<<endl;
 cout<<"1.Addition"<<endl;
 cout<<"2.Subtraction"<<endl;
@@ -25,4 +25,14 @@ break;
 case 3:
 result=num1*num2;
 cout<<"Result:"<<result<<endl;
-break
+break;
+case 4:
+result=num1/num2;
+cout<<"Result="<<result<<endl;
+break;
+default:
+cout<<"Invalid input";
+break;
+}
+return 0;
+}
