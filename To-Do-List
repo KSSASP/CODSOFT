@@ -1,0 +1,86 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+struck task{
+string description;
+bool completed;
+};
+vector<task>tasks;
+void addtask(){
+string description;
+cout<<"Enter task description"; 
+getline(cin.desciption);
+tasks.push_back({description,false});
+cout<<"Task added successfully";
+void viewtasks(){
+if(tasks.empty(){
+cout<<"No tasks in the list.\n"; 
+}else{
+for(size_t i=0;i<tasks.size();++i){
+cout<<i+1<<"."<<(tasks[i].completed?"completed":"p ending")<<endl;
+}
+}
+}
+void markaskcompleted(){
+viewtasks();
+int index;
+cout<<"Enter task number to mark as completed:";
+cin>>index;
+cin.ignore();
+if(index>0&&index<=tasks.size()){
+tasks[index-1].completed=true;
+cout<<"Task marks as completed.\n";
+}else{
+cout<<"Invalid task number\n";
+}
+}
+void removetask(){
+viewtasks();
+int index;
+cout<<"Enter task number to remove:";
+cin>>index;
+cin.ignore();
+if(index>0&&index<=tasks.size(){
+cout<<"Task"<<task[index-1].description<<"removed.\n";
+}else{
+cout<<"Invalid task number\n";
+}
+}
+void main menu(){
+while(true){
+cout<<"\nto-do-list manager\n";
+cout<<"1.add.tasks\n";
+cout<<"2.view tasks\n";
+cout<<"3.mark task as completed\n";
+cout<<"4.remove tasks";
+cout<<"5.exit\n";
+cout<<"choosen as option(1-5);";
+int choice;
+cin>>choice;
+cin.ignore();
+switch(choice){
+case 1:
+addtask();
+break;
+case 2:
+viewtasks();
+break;
+case 3:
+marktaskcompleted;
+break;
+case 4:
+removetask();
+break;
+case 5:
+cout<<"Exciting to-do-list manager.goodbye!\n";
+break;
+default:
+cout<<"Invalid option.please try again \n";
+}
+}
+}
+int main(){
+mainmenu();
+return 0;
+}
